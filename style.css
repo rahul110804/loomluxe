@@ -472,12 +472,12 @@ nav i {
 
     .about-brand h3,
     .vision h3 {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .about-brand p,
     .vision p {
-        font-size: 13px;
+        font-size: 10px;
     }
 
     .tagline> :nth-child(1) {
