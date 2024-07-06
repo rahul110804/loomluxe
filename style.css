@@ -1,0 +1,1043 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+    background-image: url(images/pic2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+    color: white;
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box2 {
+    padding-right: 20px;
+
+}
+
+.icon {
+    padding: 14px;
+    transform: scale(10.5);
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: transparent;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0 25px;
+    z-index: 1000;
+    transition: background-color 0s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(19, 10, 10, 0.9);
+    /* Background color when scrolled */
+}
+
+nav img {
+
+    width: 150px;
+    position: relative;
+    z-index: 10;
+    transform: scale(1);
+
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 24px;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    transition: all 0.5s;
+    transform: scale(1.2);
+    background-color: #00808059;
+    border-radius: 20px;
+}
+
+nav i {
+    width: 100px;
+    height: 100px;
+    padding-right: 30px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #00808059;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+    top: 180px;
+    overflow: hidden;
+}
+
+.hero>span {
+    display: inline-block;
+    animation: appear 1s ease-out forwards;
+    opacity: 0;
+}
+
+.hero> :nth-child(1) {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    animation-delay: 0s;
+}
+
+.hero> :nth-child(2) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    animation-delay: 0s;
+}
+
+.hero> :nth-child(3) {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    animation-delay: 2s;
+}
+
+.hero> :nth-child(4) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    animation-delay: 2s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.first {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/group-friends-sitting-around-coffee-table-laughing-chatting-with-variety-coffee-drinks_175086-2585.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+}
+
+.about-us-heading {
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-heading h2 {
+    margin: 0;
+    font-size: 100px;
+    color: white;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-us-heading h2.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-us-heading span {
+    color: white;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.about-us-heading span.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    position: relative;
+    top: 520px;
+}
+
+.about-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.about-brand h3 {
+    width: 100%;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: Philosopher;
+}
+
+.about-brand p {
+    position: relative;
+    padding-top: 10px;
+    font-size: 17px;
+    text-align: justify;
+    font-family: DM serif text;
+}
+
+.vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.vision h3 {
+    width: 100%;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: Philosopher;
+}
+
+.vision p {
+    position: relative;
+    padding-top: 10px;
+    font-size: 17px;
+    text-align: justify;
+    font-family: DM serif text;
+}
+
+.tagline {
+    padding-top: 30px;
+}
+
+.tagline>span {
+    display: block;
+}
+
+.tagline> :nth-child(1) {
+    font-family: philospher;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    animation-delay: 0s;
+    color: rgb(89, 18, 18);
+}
+
+.tagline> :nth-child(2) {
+    font-family: philospher;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    animation-delay: 0s;
+    color: rgb(89, 18, 18);
+}
+
+.tagline a {
+    padding-top: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    word-spacing: 1px;
+    cursor: pointer;
+}
+
+.seperation {
+    height: 4px;
+    width: 95%;
+    background-color: black;
+    position: relative;
+    margin-top: 560px;
+    left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .about-us-heading h2 {
+        font-size: 80px;
+    }
+
+    .about-us-heading span {
+        font-size: 35px;
+    }
+
+    .about-brand h3,
+    .vision h3 {
+        font-size: 30px;
+    }
+
+    .about-brand p,
+    .vision p {
+        font-size: 16px;
+    }
+
+    .tagline> :nth-child(1) {
+        font-size: 40px;
+    }
+
+    .tagline> :nth-child(2) {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-us-heading h2 {
+        font-size: 60px;
+    }
+
+    .about-us-heading span {
+        font-size: 30px;
+    }
+
+    .about-brand h3,
+    .vision h3 {
+        font-size: 25px;
+    }
+
+    .about-brand p,
+    .vision p {
+        font-size: 15px;
+    }
+
+    .tagline> :nth-child(1) {
+        font-size: 35px;
+    }
+
+    .tagline> :nth-child(2) {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-heading h2 {
+        font-size: 50px;
+    }
+
+    .about-us-heading span {
+        font-size: 25px;
+    }
+
+    .about-brand h3,
+    .vision h3 {
+        font-size: 20px;
+    }
+
+    .about-brand p,
+    .vision p {
+        font-size: 14px;
+    }
+
+    .tagline> :nth-child(1) {
+        font-size: 30px;
+    }
+
+    .tagline> :nth-child(2) {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us-heading h2 {
+        font-size: 40px;
+    }
+
+    .about-us-heading span {
+        font-size: 20px;
+    }
+
+    .about-brand h3,
+    .vision h3 {
+        font-size: 18px;
+    }
+
+    .about-brand p,
+    .vision p {
+        font-size: 13px;
+    }
+
+    .tagline> :nth-child(1) {
+        font-size: 25px;
+    }
+
+    .tagline> :nth-child(2) {
+        font-size: 20px;
+    }
+}
+    @media (max-width: 595px) {
+        .about-us-heading h2 {
+            font-size: 40px;
+        }
+
+        .about-us-heading span {
+            font-size: 20px;
+        }
+
+        .about-brand h3,
+        .vision h3 {
+            font-size: 18px;
+        }
+
+        .about-brand p,
+        .vision p {
+            font-size: 13px;
+        }
+
+        .tagline> :nth-child(1) {
+            font-size: 25px;
+        }
+
+        .tagline> :nth-child(2) {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-us-heading h2 {
+            font-size: 30px;
+        }
+
+        .about-us-heading span {
+            font-size: 18px;
+        }
+
+        .about-brand h3,
+        .vision h3 {
+            font-size: 16px;
+        }
+
+        .about-brand p,
+        .vision p {
+            font-size: 11px;
+        }
+
+        .tagline> :nth-child(1) {
+            font-size: 22px;
+        }
+
+        .tagline> :nth-child(2) {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .about-us-heading h2 {
+            font-size: 30px;
+        }
+
+        .about-us-heading span {
+            font-size: 15px;
+        }
+
+        .about-brand h3,
+        .vision h3 {
+            font-size: 16px;
+        }
+
+        .about-brand p,
+        .vision p {
+            font-size: 10px;
+        }
+
+        .tagline> :nth-child(1) {
+            font-size: 20px;
+        }
+
+        .tagline> :nth-child(2) {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 300px) {
+        .first {
+            margin-top: 10px;
+        }
+    
+        .about-us-heading h2 {
+            font-size: 50px;
+            padding: 5px;
+        }
+    
+        .about-us-heading span {
+            font-size: 15px;
+        }
+    
+
+    
+        .about-brand h3,
+        .vision h3 {
+            font-size: 15px;
+        }
+    
+        .about-brand p,
+        .vision p {
+            font-size: 8px;
+        }
+    
+        .tagline> :nth-child(1) {
+            font-size: 24px;
+        }
+    
+        .tagline> :nth-child(2) {
+            font-size: 20px;
+        }
+    
+        .tagline a {
+            font-size: 12px;
+        }
+    }
+
+.products {
+    position: relative;
+    margin-top: 10px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-family: DM serif text;
+    font-size: 40px;
+    font-weight: 35;
+    text-decoration: underline;
+}
+
+.image-wrapper {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns, each occupying equal space */
+    grid-gap: 20px;
+    /* Adjust this value for the desired gap between images */
+    position: relative;
+    top: 10px;
+    padding: 10px;
+}
+
+.image-wrapper img {
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+
+    .heading h2 {
+        font-size: 35px;
+    }
+
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
+    }
+    .image-wrapper
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Small screens (phones, etc.) */
+@media (max-width: 768px) {
+
+    .heading h2 {
+        font-size: 30px;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+        /* One column */
+        grid-gap: 15px;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        /* Ensure images fit within the container */
+    }
+}
+
+/* Extra small screens (very small phones, etc.) */
+@media (max-width: 576px) {
+
+    .heading h2 {
+        font-size: 25px;
+    }
+
+    .images {
+        grid-gap: 10px;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+    }
+}
+
+.seperation2 {
+    height: 4px;
+    width: 95%;
+    background-color: black;
+    position: relative;
+    margin-top: 20px;
+    left: 35px;
+}
+
+.stores {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stores h2 {
+    font-family: DM serif text;
+    font-size: 40px;
+    font-weight: 35;
+    text-decoration: underline;
+}
+
+.stores>span {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    animation: appear 1s ease-out forwards;
+    opacity: 0;
+}
+
+.stores>span {
+    display: block;
+}
+
+.stores> :nth-child(2) {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+
+.stores> :nth-child(3) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+.seperation3 {
+    height: 4px;
+    width: 95%;
+    background-color: black;
+    position: relative;
+    margin-top: 20px;
+    left: 35px;
+}
+
+.contact {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    height: 600px;
+}
+
+.background2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/contact-banner.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content2 {
+    position: relative;
+    bottom: 120px;
+}
+
+.content2>span {
+    display: block;
+}
+
+.content2> :nth-child(1) {
+    color: rgb(147, 30, 30);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+}
+
+.content2> :nth-child(2) {
+    color: rgb(170, 40, 40);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+.info {
+    position: relative;
+    bottom: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icons {
+    fill: black;
+    margin-right: 8px;
+}
+
+.social-media {
+    position: relative;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.instagram a {
+    text-decoration: none;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.452);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+}
+
+.facebook a {
+    text-decoration: none;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.452);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+}
+
+.whatsapp {
+    position: relative;
+    bottom: 50px;
+}
+
+.whatsapp>span {
+    display: block;
+}
+
+.whatsapp> :nth-child(1) {
+    color: rgb(24, 3, 3);
+    font-family: philospher;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+
+.whatsapp> :nth-child(2) {
+    color: rgb(33, 6, 6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.whatsapp-btn {
+    position: absolute;
+    left: 48%;
+    top: 80px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-btn :hover {
+    transform: scale(1.1);
+    transition: all ease-in-out;
+}
+
+@media screen and (max-width:507px) {
+    .content2 {
+        bottom: 200px;
+    }
+
+    .info {
+        bottom: 120px;
+    }
+
+    .whatsapp {
+        bottom: 30px;
+    }
+
+    .whatsapp> :nth-child(1) {
+        color: rgb(24, 3, 3);
+        font-family: philospher;
+        font-weight: bold;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .whatsapp> :nth-child(2) {
+        color: rgb(33, 6, 6);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 300;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .content2 {
+        bottom: 300px;
+    }
+
+    .info {
+        bottom: 250px;
+    }
+
+    .whatsapp {
+        bottom: 60px;
+    }
+
+    .whatsapp> :nth-child(1) {
+        color: rgb(24, 3, 3);
+        font-family: philospher;
+        font-weight: bold;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .whatsapp> :nth-child(2) {
+        color: rgb(33, 6, 6);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 300;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .social-media {
+        bottom: 150px;
+    }
+}
+
+
+
+@media screen and (max-width:1100px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .menu-btn {
+        display: block;
+        position: absolute;
+        left: 0px;
+        /* Adjust the left position as needed */
+    }
+
+    nav img {
+        position: relative;
+        z-index: 10;
+        padding-left: 50px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transition: transform 0.3s;
+        transform: translateY(0);
+        background-color: rgba(19, 10, 10, 0.9);
+
+    }
+
+    nav.scrolled {
+        transform: translateY(-100%);
+    }
+
+    .content img {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .hideonmobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
